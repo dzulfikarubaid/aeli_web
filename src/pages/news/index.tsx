@@ -6,7 +6,7 @@ import { FaSearch, FaTimes } from 'react-icons/fa';
 import Navbar from './navbar';
 import { useRouter } from 'next/router';
 import useResponsive from '@/components/useResponsive';
-function news() {
+function News() {
   const [value, setValue] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [filteredData, setFilteredData] = useState([]);
@@ -136,4 +136,4 @@ return (
 );
 }
 
-export default news;
+export default News;
