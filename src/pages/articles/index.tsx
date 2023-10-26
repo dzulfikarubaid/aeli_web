@@ -99,7 +99,7 @@ const { isDesktop } = useResponsive()
       ) : filteredData.length > 0 ? (
         filteredData.map((item: any, index) => (
           <div key={item.id} className={`flex flex-col ${!isDesktop ? 'w-full' : 'w-[500px]'} border-[1px] rounded-xl h-fit gap-4 p-4`}>
-            <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-xl'} `}>
+            <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-md'} `}>
               <Link className='hover:border-b hover:border-black w-fit' href={`/profile/${item.name}`}>
                 {item.name}
               </Link>

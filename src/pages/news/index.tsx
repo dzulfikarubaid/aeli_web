@@ -5,8 +5,8 @@ import { FaPenToSquare } from 'react-icons/fa6';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import Navbar from './navbar';
 import { useRouter } from 'next/router';
-
-function Articles() {
+import useResponsive from '@/components/useResponsive';
+function news() {
   const [value, setValue] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [filteredData, setFilteredData] = useState([]);
@@ -14,7 +14,7 @@ function Articles() {
   const searchInputRef = useRef(null);
   const router = useRouter();
   const [loading, setLoading] = useState(false)
-
+  const {isDesktop} = useResponsive()
   useEffect(() => {
     setLoading(true)
     axios
@@ -82,64 +82,58 @@ filteredData.forEach((item) => {
   }
 });
 
-  return (
-    <div>
-      <Navbar
-        searchInput={searchInput}
-        setSearchInput={setSearchInput}
+return (
+  <div className='flex flex-col w-full justify-center items-center'>
+    <Navbar
+      searchInput={searchInput}
+      setSearchInput={setSearchInput}
 
-        handleSearchSubmit={handleSearchSubmit}
-      />
+      handleSearchSubmit={handleSearchSubmit}
+    />
 
-<div className='flex flex-row px-24 py-10 gap-10 justify-center'>
-    <section className='flex flex-col w-[800px] gap-10'>
-      {loading ? (
-        <h1>Memuat data...</h1>
-      ) : filteredData.length > 0 ? (
-        filteredData.map((item: any, index) => (
-          <div key={item.id} className='flex flex-col w-[600px] gap-4 p-4'>
-            <div className='flex flex-row gap-1 h-6'>
-              <Link className='hover:border-b hover:border-black w-fit' href={`/profile/${item.name}`}>
-                {item.name}
-              </Link>
-              <p>•</p>
-              <Link href={`/news/${item.id}`}>{formatTimeLeft(item.create_at)}</Link>
-            </div>
-            <Link href={`/news/${item.id}`} className=' flex flex-row justify-between items-start'>
-              <div>
-                <h1 className='font-bold text-xl'>{item.title}</h1>
-                <div
-                  className='text-md font-light text-black'
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      item.content.length > 120
-                        ? item.content.substring(0, 120).trim().replace(/\s+/g, ' ') + '...'
-                        : item.content
-                  }}
-                />
-              </div>
-              <img className='w-[100px] h-[100px] object-scale-down' src={item.image} alt='' />
+<div className={`flex flex-col px-6 py-10 gap-10 justify-center items-center ${!isDesktop ? '' : 'w-full'}`}>
+  <section className={`flex flex-wrap gap-4 justify-center items-center `}>
+    {loading ? (
+      null
+    ) : filteredData.length > 0 ? (
+      filteredData.map((item: any, index) => (
+        <div key={item.id} className={`flex flex-col ${!isDesktop ? 'w-full' : 'w-[500px]'} border-[1px] rounded-xl h-fit gap-4 p-4`}>
+          <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-md'} `}>
+            <Link className='hover:border-b hover:border-black w-fit' href={`/profile/${item.name}`}>
+              {item.name}
             </Link>
+            <p>•</p>
+            <Link href={`/news/${item.id}`}>{formatTimeLeft(item.create_at)}</Link>
           </div>
-        ))
-      ) : (
-        <div>Berita tidak ditemukan</div>
-      )}
-    </section>
-    <section>
-    <div className='w-[350px] flex flex-col gap-3'>
-      <h1 className='font-bold'>Peringkat Penulis Terbanyak</h1>
-      {Object.keys(nameCount).sort((a, b) => nameCount[b] - nameCount[a]).map((name, index) => (
-        <div key={index}>
-          {index+1}. {name}: {nameCount[name]} berita
+          <Link href={`/news/${item.id}`} className=' flex flex-row justify-between gap-4'>
+            <div>
+              <h1 className={`font-bold ${!isDesktop ? 'text-[16px]' : 'text-2xl'} `}>{item.title}</h1>
+              <div
+                className={`font-light ${!isDesktop ? 'text-[12px]' : 'text-xl'} `}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    item.content.length > 100
+                      ? item.content.substring(0, 100).trim().replace(/\s+/g, ' ') + '...'
+                      : item.content
+                }}
+              />
+            </div>
+            {
+              !item.image ? 
+              <img className='w-[100px] h-[100px] object-scale-down' src={'/logo-aeli.png'} alt='' />:
+              <img className='w-[100px] h-[100px] object-scale-down' src={item.image} alt='' />
+            }
+          </Link>
         </div>
-      ))}
-    </div>
+      ))
+    ) : (
+      <div>Berita tidak ditemukan</div>
+    )}
   </section>
 </div>
 
-    </div>
-  );
+  </div>
+);
 }
 
-export default Articles;
+export default news;

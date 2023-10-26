@@ -27,14 +27,14 @@ const slides = [
 ];
 export default function Home() {
   const [dpd, setDPD] = useState(false)
-  const {isMobile, isDesktop} = useResponsive()
+  const {isMobile, isDesktop, isTablet} = useResponsive()
   return (
     <div className='w-full flex-col'>
     <Head>
       <title>Home - AELI</title>
     </Head>
     <Navbar></Navbar>
-    <div className={`flex flex-col ${!isDesktop ? 'w-[800px]' : 'max-w-full'}`}>
+    <div className={`flex flex-col ${!isDesktop ? 'w-[800px]' : isTablet ? 'w-full' : 'w-full'}`}>
     <MySwiper></MySwiper>
     <div className='flex-col text-center items-center relative justify-center w-full p-10' style={{background:'#1B3B64'}}>
    <div className='absolute left-1/2 transform -translate-x-1/2 text-center'>
