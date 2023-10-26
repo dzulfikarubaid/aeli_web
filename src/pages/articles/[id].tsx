@@ -122,9 +122,9 @@ function DetailArticles() {
         handleSearchSubmit={handleSearchSubmit}
       />
   
-       <div className={`flex flex-col justify-center items-center `}>
+       <div className={`flex flex-col justify-center items-center w-full px-6`}>
         {selectedArticle && (
-          <div className={`flex ${!isDesktop ? '' : 'w-[1000px]'} flex-col gap-10 justify-center items-center px-6`}>
+          <div className={`flex ${!isDesktop ? 'w-full' : 'w-[1000px]'} flex-col gap-10 justify-center items-center `}>
             <h1 className={`font-extrabold ${!isDesktop ? 'text-[20px]' : 'text-[40px]'}`}>{articleTitle}</h1>
             <div className="flex flex-col w-full">
               <Link className='hover:border-b w-fit hover:border-black' href={`/profile/${selectedArticle.name}`}>{selectedArticle.name}</Link>

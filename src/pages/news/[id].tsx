@@ -126,7 +126,7 @@ function DetailArticles() {
         handleSearchSubmit={handleSearchSubmit}
       />
   
-       <div className={`flex flex-col justify-center items-center w-full px-4`}>
+       <div className={`flex flex-col justify-center items-center w-full px-6`}>
         {selectedArticle && (
           <div className={`flex ${!isDesktop ? 'w-full' : 'w-[1000px]'} flex-col gap-10 justify-center items-center px-1`}>
             <h1 className={`font-extrabold ${!isDesktop ? 'text-[20px]' : 'text-[40px]'}`}>{articleTitle}</h1>
