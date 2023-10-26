@@ -14,7 +14,7 @@ function news() {
   const searchInputRef = useRef(null);
   const router = useRouter();
   const [loading, setLoading] = useState(false)
-  const {isDesktop} = useResponsive()
+
   useEffect(() => {
     setLoading(true)
     axios
@@ -81,7 +81,7 @@ filteredData.forEach((item) => {
     nameCount[name] = 1;
   }
 });
-
+const {isDesktop} = useResponsive()
 return (
   <div className='flex flex-col w-full justify-center items-center'>
     <Navbar
