@@ -34,7 +34,7 @@ export default function Home() {
       <title>Home - AELI</title>
     </Head>
     <Navbar></Navbar>
-    <div className={`flex flex-col ${!isDesktop ? 'w-[800px]' : isTablet ? 'w-full' : 'w-full'}`}>
+    <div className={`flex h-fit flex-col ${!isDesktop ? 'w-[800px]' : isTablet ? 'w-full' : 'w-full'}`}>
     <MySwiper></MySwiper>
     <div className='flex-col text-center items-center relative justify-center w-full p-10' style={{background:'#1B3B64'}}>
    <div className='absolute left-1/2 transform -translate-x-1/2 text-center'>

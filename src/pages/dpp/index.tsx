@@ -82,7 +82,7 @@ const pengurus = [
 ]
 function dpp() {
     function Card(props:any){
-        const {nama, jabatan, foto, key} = props
+        const {nama, jabatan, foto} = props
         const formattedNama = nama
         .split(' ')
         .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
@@ -107,13 +107,24 @@ function dpp() {
         <div className=''>
         <div className='flex flex-col justify-center items-center'>
             <h1 className='font-bold text-center text-xl'>Struktur Organisasi Dewan Pengurus Pusat</h1>
-        <Image className='my-10' alt='' width={800} height={400} src={'/OrgChart.png'}></Image>
+        <Image className='my-10' alt='' width={800} height={400} src={'/org.jpg'}></Image>
         </div>
         <h1 className='font-bold text-center text-xl'>Daftar Dewan Pengurus Pusat</h1>
         <div className='flex flex-wrap w-full gap-10 justify-center py-10'>
-        {pengurus.map((item, index) => (
-          <Card {...item} key={index}></Card>
-        ))}
+
+          <div className='w-full'>
+            <div className='flex flex-row justify-between items-center w-full '>
+                <div>
+                    <h1 className='font-bold'>Dewan Pembina</h1>
+                    <Card nama="NURFAHMI" jabatan="Ketua Umum" foto="/avatar-blue.png"></Card>
+
+                </div>
+                <div>
+                    <h1 className='font-bold'>Dewan Etik</h1>
+                </div>
+            </div>
+        
+          </div>
         </div>
         </div>
       </NoNavbar>

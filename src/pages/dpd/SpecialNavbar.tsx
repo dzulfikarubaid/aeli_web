@@ -164,7 +164,7 @@ function NavbarWhite(props:any){
               data ?
               <div className='flex flex-row gap-4 items-center'>
                 <a className={`text-black`} href={`profile/${data.user.name}`}>{data.user.name}</a>
-                <button className={` py-2 rounded-full border-2 px-4 ${!white ? 'text-white border-white' : 'text-black border-black'}`}  onClick={handleSignout}>Sign Out</button>
+                <button className={` py-2 rounded-full border-2 px-4 text-black border-black`}  onClick={handleSignout}>Sign Out</button>
               </div>
               :
               <button className={` py-2 rounded-full border-2 px-4 text-black border-black`} onClick={()=>signIn()}>Sign In</button>

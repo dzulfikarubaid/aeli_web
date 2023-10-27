@@ -185,7 +185,7 @@ const DetailDPD = () => {
               
               <Map targetState={stateName}></Map>
               
-              <div className="flex flex-row pt-10 gap-10">
+              <div className="flex flex-row pt-10 gap-10 w-full border-t-[1px] border-gray-400">
               
               <iframe src={item.gmaps} ></iframe>
               <div className="flex flex-col gap-2">

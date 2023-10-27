@@ -108,9 +108,9 @@ const { isDesktop } = useResponsive()
             </div>
             <Link href={`/articles/${item.id}`} className=' flex flex-row justify-between gap-4'>
               <div>
-                <h1 className={`font-bold ${!isDesktop ? 'text-[16px]' : 'text-2xl'} `}>{item.title}</h1>
+                <h1 className={`font-bold ${!isDesktop ? 'text-[16px]' : 'text-xl'} `}>{item.title}</h1>
                 <div
-                  className={`font-light ${!isDesktop ? 'text-[12px]' : 'text-xl'} `}
+                  className={`font-light ${!isDesktop ? 'text-[12px]' : 'text-md'} `}
                   dangerouslySetInnerHTML={{
                     __html:
                       item.content.length > 100

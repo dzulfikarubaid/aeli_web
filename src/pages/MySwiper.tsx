@@ -13,8 +13,8 @@ const MySwiper = () => {
       spaceBetween={50}
       slidesPerView={1}
       autoplay={{
-        delay: 2000,
-        pauseOnMouseEnter: true,
+        delay: 4000,
+        pauseOnMouseEnter: false,
       }}
       effect='fade'
       fadeEffect={{crossFade: true}}
@@ -25,16 +25,17 @@ const MySwiper = () => {
     >
       <SwiperSlide>
           <div className=''>
-          <img className='max-w-full min-w-full' src="image 1.png" alt="" />
+          <img className='max-w-full relative min-w-full brightness-50' src="/Foto Pengurus/home2.JPG" alt="" />
           <h1 className='absolute text-4xl font-extrabold w-[400px] text-white left-10 top-1/2'>Bangun Pondasi Dengan Peningkatan Kapasitas Terbaik</h1>
         
           </div>
           
       </SwiperSlide>
-      {/* <SwiperSlide>
-       <img  className='max-w-full min-w-full' src="image 1.png" alt="" />
+      <SwiperSlide>
+       <img  className='max-w-full min-w-full brightness-50' src="/Foto Pengurus/home1.JPG" alt="" />
+       <h1 className='absolute text-4xl font-extrabold w-[400px] text-white left-10 top-1/2'>AELI Untuk Negeri Bersatu Berjaya</h1>
       </SwiperSlide>
-      <div className="swiper-pagination"></div> */}
+      <div className="swiper-pagination"></div>
     </Swiper>
   );
 };

@@ -5,29 +5,20 @@ import Navbar from "./navbar";
 import { FaShare } from "react-icons/fa";
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import Link from "next/link";
+
 import {
-  EmailShareButton,
-  FacebookIcon,
+
   FacebookShareButton,
-  HatenaShareButton,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TumblrShareButton,
-  TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
-  WhatsappIcon,
+ 
   WhatsappShareButton,
-  WorkplaceShareButton
+
 } from "react-share";
+import {Swiper, SwiperSlide}
+ from "swiper/react";
+ import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import { FaHandsClapping, FaWhatsapp, FaFacebook } from "react-icons/fa6";
 import {PiHandsClapping} from "react-icons/pi";
 import {RiShareForward2Line, RiShareForwardBoxFill} from "react-icons/ri";
@@ -39,6 +30,7 @@ interface DataItem {
   create_at: string
 }
 import useResponsive from "@/components/useResponsive";
+import MySwiper from "../MySwiper";
 
 function DetailArticles() {
   const [selectedArticle, setSelectedArticle] = useState<DataItem | null>(null);
@@ -49,7 +41,9 @@ function DetailArticles() {
   const router = useRouter();
   const articleTitle = selectedArticle ? selectedArticle.title : "Artikel tidak ditemukan";
   const [share, setShare] = useState(false);
-  const {isDesktop} = useResponsive()
+  const {isDesktop, isTablet} = useResponsive()
+
+  
   useEffect(() => {
     axios.get('/api/getarticles')
       .then((res) => {
@@ -163,7 +157,60 @@ function DetailArticles() {
         )}
 
       </div>
+      <div>
+     <div className="mt-10">
+     <h1 className="text-center mb-6 font-bold text-xl">Artikel lainnya</h1>
+      <div className={`flex h-fit justify-center items-center  flex-col ${!isDesktop ? 'w-[300px]' : isTablet ? 'w-[1000px]' : 'w-[1200px]'}`}>
+      <Swiper
+      className='h-full w-full '
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
+      spaceBetween={50}
+      slidesPerView={!isDesktop ? 1 : 2}
+      onSlideChange={(swiper) =>
+        isNaN(swiper.realIndex) && swiper.slideTo(0)
+      }
+      onSwiper={(swiper) => console.log(swiper)}
+      >
+        {
+          filteredData.length > 0 ? filteredData.map((item: any, index) => (
+            <SwiperSlide key={item.id} className="">
+              <div  className={`flex flex-col ${!isDesktop ? 'w-[300px]' : 'w-[500px]'}  border-[1px] rounded-xl h-[200px] gap-4 p-4`}>
+            <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-md'} `}>
+              <Link className='hover:border-b hover:border-black w-fit' href={`/profile/${item.name}`}>
+                {item.name}
+              </Link>
+              <p>•</p>
+              <Link href={`/articles/${item.id}`}>{formatTimeLeft(item.create_at)}</Link>
+            </div>
+            <Link href={`/articles/${item.id}`} className=' flex flex-row justify-between gap-4'>
+              <div>
+                <h1 className={`font-bold ${!isDesktop ? 'text-[16px]' : 'text-xl'} `}>{item.title}</h1>
+                <div
+                  className={`font-light ${!isDesktop ? 'text-[12px]' : 'text-md'} `}
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      item.content.length > 100
+                        ? item.content.substring(0, 100).trim().replace(/\s+/g, ' ') + '...'
+                        : item.content
+                  }}
+                />
+              </div>
+              {
+                !item.image ? 
+                <img className='w-[100px] h-[100px] object-scale-down' src={'/logo-aeli.png'} alt='' />:
+                <img className='w-[100px] h-[100px] object-scale-down' src={item.image} alt='' />
+              }
+            </Link>
+          </div>
+            </SwiperSlide>
+          )):
+          ''
+        }
+      </Swiper>
+      </div>
+     </div>
      
+      </div>
      
     </div>
   )

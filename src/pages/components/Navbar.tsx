@@ -107,28 +107,7 @@ function NavbarWhite(props:any){
   const [white, setWhite] = useState(false);
   const {className} = props
   const {data}:any = useSession()
-  function setWhited(){
-    if(window.scrollY > 560){
-      setWhite(true);
-    }else{
-      setWhite(false);
-    }
-  }
-  function setFixed(){
-   
-      if(window.scrollY > 560){
-        setFix(true);
-      }else{
-        setFix(false);
-      }
-  
-    
-   
-  }
-  useEffect(()=>{
-    window.addEventListener('scroll', setFixed);
-    window.addEventListener('scroll', setWhited);
-  },[])
+
   const {push} = useRouter()
   function handleSignout(){
     signOut()
@@ -164,7 +143,7 @@ function NavbarWhite(props:any){
               data ?
               <div className='flex flex-row gap-4 items-center'>
                 <Link className={`text-black`} href={`/profile/${data.user.name}`}>{data.user.name}</Link>
-                <button className={` py-2 rounded-full border-2 px-4 ${!white ? 'text-white border-white' : 'text-black border-black'}`}  onClick={handleSignout}>Sign Out</button>
+                <button className={` py-2 rounded-full border-2 px-4 text-black border-black`}  onClick={handleSignout}>Sign Out</button>
               </div>
               :
               <button className={` py-2 rounded-full border-2 px-4 text-black border-black`} onClick={()=>signIn()}>Sign In</button>

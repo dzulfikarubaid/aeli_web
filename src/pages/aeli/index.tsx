@@ -181,25 +181,30 @@ function Index() {
           ●	Pendampingan Desa Wisata untuk menjadi Penyedia Layanan Wisata Experiential</p>
         
         </div>
+        <div className='flex flex-col justify-center items-center w-full'>
         <Title id='sertifikasi'>Sertifikasi</Title>
+        <Image width={400} height={200} src={'/bnsp-logo.png'} alt=''></Image>
         <p className='pt-4'>
           AELI telah menjadi mitra BNSP dan LSP untuk mengadakan Sertifikasi Uji Kompetensi  Kepemanduan Outbound sejak tahun 2014. Daftar pelaksanaan Sertifikasi Uji Kompetensi Kepemanduan Outbound adalah sebagai berikut :
          
         </p></div>
+        
         <div className='flex flex-wrap gap-6 justify-center w-full items-center'>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Tebet, Senin, 17 November 2014 (para asesor)</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Cibubur, Selasa, 24 Maret 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Pancawati, Selasa, April 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Boyolali, Selasa, 26 Mei 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Denpasar, Rabu, 25 November 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Kaliurang, Selasa, 1 Desember 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Cibubur, Minggu, 6 Desember 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Panjang Jiwo, Rabu, 16 Desember 2015</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Lembang, Senin, 10 Mei 2016</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Denpasar, Rabu-Kamis, 2-3 Agustus 2017</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Lubana Sengkol, Selasa-Rabu, 15-16 Agustus 2017</h1>
-        <h1 className='bg-blue-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Makassar, Minggu, 20 Agustus 2017</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Tebet, Senin, 17 November 2014 (para asesor)</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Cibubur, Selasa, 24 Maret 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Pancawati, Selasa, April 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Boyolali, Selasa, 26 Mei 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Denpasar, Rabu, 25 November 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Kaliurang, Selasa, 1 Desember 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Cibubur, Minggu, 6 Desember 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Panjang Jiwo, Rabu, 16 Desember 2015</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Lembang, Senin, 10 Mei 2016</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Denpasar, Rabu-Kamis, 2-3 Agustus 2017</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Lubana Sengkol, Selasa-Rabu, 15-16 Agustus 2017</h1>
+        <h1 className='bg-gray-900 rounded-full py-3 px-3 text-white mt-4 w-[500px] text-center' >Makassar, Minggu, 20 Agustus 2017</h1>
         </div>
+  
+       </div>
          
       </NoNavbar>
       <Footer></Footer></div>
