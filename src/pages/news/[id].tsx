@@ -39,6 +39,13 @@ interface DataItem {
   create_at: string
 }
 import useResponsive from "@/components/useResponsive";
+import { Navigation } from "react-calendar";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+
+import { Pagination, Scrollbar, A11y, Autoplay, EffectFade } from "swiper/modules";
+import { SwiperSlide, Swiper } from "swiper/react";
 
 function DetailArticles() {
   const [selectedArticle, setSelectedArticle] = useState<DataItem | null>(null);
@@ -49,7 +56,7 @@ function DetailArticles() {
   const router = useRouter();
   const articleTitle = selectedArticle ? selectedArticle.title : "Berita tidak ditemukan";
   const [share, setShare] = useState(false);
-  const {isDesktop} = useResponsive()
+  const {isDesktop, isTablet} = useResponsive()
   useEffect(() => {
     axios.get('/api/getnews')
       .then((res) => {
@@ -118,6 +125,7 @@ function DetailArticles() {
         // Terjadi kesalahan dalam pengiriman data
       });
   };
+  
   return (
     <div className="flex flex-col justify-center items-center ">
       <Navbar
@@ -167,8 +175,59 @@ function DetailArticles() {
         )}
 
       </div>
-     
-     
+      <div className="mt-10">
+     <h1 className="text-center mb-6 font-bold text-xl">Artikel lainnya</h1>
+      <div className={`flex h-fit justify-center items-center  flex-col ${!isDesktop ? 'w-[400px] ' : isTablet ? 'w-[1000px]' : 'w-[1200px]'}`}>
+      <Swiper
+      className='h-full w-full '
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
+      
+      slidesPerView={!isDesktop ? 1 : 2}
+      onSlideChange={(swiper) =>
+        isNaN(swiper.realIndex) && swiper.slideTo(0)
+      }
+      onSwiper={(swiper) => console.log(swiper)}
+      >
+        {
+          filteredData.length > 0 ? filteredData.map((item: any, index) => (
+            <SwiperSlide key={item.id} className="">
+              <div className="flex flex-col w-full justify-center items-center">
+              <div  className={`flex flex-col ${!isDesktop ? 'w-[calc(100%-24px)]' : 'w-[500px]'}  border-[1px] rounded-xl h-[200px] gap-4 p-4`}>
+            <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-md'} `}>
+              <Link className='hover:border-b hover:border-black w-fit' href={`/profile/${item.name}`}>
+                {item.name}
+              </Link>
+              <p>•</p>
+              <Link href={`/articles/${item.id}`}>{formatTimeLeft(item.create_at)}</Link>
+            </div>
+            <Link href={`/articles/${item.id}`} className=' flex flex-row justify-between gap-4'>
+              <div>
+                <h1 className={`font-bold ${!isDesktop ? 'text-[16px]' : 'text-xl'} `}>{item.title}</h1>
+                <div
+                  className={`font-light ${!isDesktop ? 'text-[12px]' : 'text-md'} `}
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      item.content.length > 100
+                        ? item.content.substring(0, 100).trim().replace(/\s+/g, ' ') + '...'
+                        : item.content
+                  }}
+                />
+              </div>
+              {
+                !item.image ? 
+                <img className='w-[100px] h-[100px] object-scale-down' src={'/logo-aeli.png'} alt='' />:
+                <img className='w-[100px] h-[100px] object-scale-down' src={item.image} alt='' />
+              }
+            </Link>
+          </div>
+              </div>
+            </SwiperSlide>
+          )):
+          ''
+        }
+      </Swiper>
+      </div>
+     </div>
     </div>
   )
 }
