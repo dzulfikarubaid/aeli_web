@@ -39,12 +39,12 @@ interface DataItem {
   create_at: string
 }
 import useResponsive from "@/components/useResponsive";
-import { Navigation } from "react-calendar";
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import { Pagination, Scrollbar, A11y, Autoplay, EffectFade } from "swiper/modules";
+import { Pagination,Navigation, Scrollbar, A11y, Autoplay, EffectFade } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 
 function DetailArticles() {
@@ -176,7 +176,7 @@ function DetailArticles() {
 
       </div>
       <div className="mt-10">
-     <h1 className="text-center mb-6 font-bold text-xl">Artikel lainnya</h1>
+     <h1 className="text-center mb-6 font-bold text-xl">Berita lainnya</h1>
       <div className={`flex h-fit justify-center items-center  flex-col ${!isDesktop ? 'w-[400px] ' : isTablet ? 'w-[1000px]' : 'w-[1200px]'}`}>
       <Swiper
       className='h-full w-full '
@@ -190,7 +190,7 @@ function DetailArticles() {
       >
         {
           filteredData.length > 0 ? filteredData.map((item: any, index) => (
-            <SwiperSlide key={item.id} className="">
+            <SwiperSlide key={index} className="">
               <div className="flex flex-col w-full justify-center items-center">
               <div  className={`flex flex-col ${!isDesktop ? 'w-[calc(100%-24px)]' : 'w-[500px]'}  border-[1px] rounded-xl h-[200px] gap-4 p-4`}>
             <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-md'} `}>
