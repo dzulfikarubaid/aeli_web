@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NoNavbar from '../NoNavbar'
 import useResponsive from '@/components/useResponsive'
+import Footer from '../Footer'
 
 
 const pengurus = [
@@ -141,12 +142,12 @@ function Dpp() {
                 </div>
                 <div className='flex flex-row justify-between w-full'>
                     <div className={`flex flex-col gap-10 items-center `}>
-                        <h1 className={`font-bold text-center ${!isDesktop && 'w-[100px]'}`}>Sekretaris Jenderal</h1>
+                        <h1 className={`font-bold text-center `}>Sekretaris Jenderal</h1>
                         <Card nama="Gigih Gesang" jabatan="Sekretaris Jenderal" foto="/e.png"></Card>
                         <Card nama="Nursanti Adji" jabatan="Kesekretariatan" foto="/e.png"></Card>
                     </div>
                     <div className={`flex flex-col gap-10 items-center `}>
-                        <h1 className={`font-bold text-center ${!isDesktop && 'w-[100px]'}`}>Bendahara Umum</h1>
+                        <h1 className={`font-bold text-center `}>Bendahara Umum</h1>
                     <Card nama="Jepih Nurhadi" jabatan="Bendahara Umum" foto="/e.png"></Card>
                     </div>
                 </div>
@@ -184,6 +185,7 @@ function Dpp() {
         </div>
 
       </NoNavbar>
+      <Footer></Footer>
         </div>
   
     )
