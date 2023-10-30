@@ -7,7 +7,7 @@ import Footer from '../Footer'
 function Activities() {
   const { isDesktop, isMobile, isTablet, isOnlyMobile } = useResponsive()
   return (
-    <>
+    <div className='w-full'>
     <Navbar className=''/>
     <div className={`flex flex-col justify-center items-center  ${!isDesktop ? 'w-[800px]' : 'w-full'} mb-10`}>
       <img className='w-full' src="https://asset-2.tstatic.net/tribunnews/foto/bank/images/pengurus-pusat-aeli-2019-2022.jpg" alt="" />
@@ -40,11 +40,11 @@ function Activities() {
      
         <h1 className='font-bold'>AELI BERSATU BERJAYA</h1>
     </div>
-    <Footer></Footer>
+   
     </div>
     
-
-    </>
+    <Footer></Footer>
+    </div>
     
         
     
