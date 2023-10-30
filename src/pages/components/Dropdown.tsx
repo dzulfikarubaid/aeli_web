@@ -199,7 +199,7 @@ function Navbar(props:any){
             <button onClick={toggle} className='mt-10 flex flex-row items-center gap-4 justify-center w-full' ><h1>About</h1>{!isBuka ? <FaChevronDown size={25}></FaChevronDown> : <FaChevronUp size={25}></FaChevronUp>}</button>
             {
               isBuka && 
-              <div className='flex flex-col gap-10'>
+              <div className='flex flex-col gap-2'>
                 <Link className='bg-gray-700 py-2' href={'/aeli'}>AELI</Link>
 
                 <Link className='bg-gray-700 py-2'  href={'/dpp'}>DPP</Link>
