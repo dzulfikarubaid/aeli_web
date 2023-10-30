@@ -1,7 +1,6 @@
 import React from 'react'
 import Content from '../Content'
 import Image from 'next/image'
-import Dpp from '../../dpp'
 import Link from 'next/link'
 import NoNavbar from '../NoNavbar'
 import useResponsive from '@/components/useResponsive'
@@ -81,7 +80,7 @@ const pengurus = [
     },
     
 ]
-function dpp() {
+function Dpp() {
     const {isDesktop, isTablet, isMobile, isOnlyMobile} = useResponsive()
     function Card(props:any){
         const {nama, jabatan, foto} = props
@@ -190,4 +189,4 @@ function dpp() {
     )
   }
   
-  export default dpp
+  export default Dpp
