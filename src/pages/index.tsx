@@ -42,7 +42,9 @@ export default function Home() {
     <p className='text-white text-sm w-[500px] mx-auto'>Asosiasi Experiental Learning Indonesia (AELI) menerapkan metode Experiental Learning (EL) dalam memberikan layanan program peningkatan kapasitas SDM </p>
   </div>
 
+    <div className='w-full justify-center items-center'>
     <img src="Group 31.png" alt="" />
+    </div>
     </div>
 
     <Prestasi></Prestasi>
