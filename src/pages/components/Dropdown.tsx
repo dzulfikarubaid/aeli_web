@@ -200,9 +200,9 @@ function Navbar(props:any){
             {
               isBuka && 
               <div className='flex flex-col gap-10'>
-                <Link href={'/aeli'}>Asosiasi Experiential Learning Indonesia</Link>
+                <Link className='bg-gray-700 py-2' href={'/aeli'}>AELI</Link>
 
-                <Link href={'/dpp'}>Dewan Pengurus Pusat</Link>
+                <Link className='bg-gray-700 py-2'  href={'/dpp'}>DPP</Link>
               </div>
                 
                 }

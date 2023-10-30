@@ -199,9 +199,9 @@ function NavbarWhite(props:any){
             {
               isBuka && 
               <div className='flex flex-col gap-10'>
-                <a href={'/aeli'}>Asosiasi Experiential Learning Indonesia</a>
+                <a className='bg-gray-700 py-2' href={'/aeli'}>AELI</a>
 
-                <a href={'/dpp'}>Dewan Pengurus Pusat</a>
+<a className='bg-gray-700 py-2'  href={'/dpp'}>DPP</a>
               </div>
                 
                 }
