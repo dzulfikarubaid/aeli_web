@@ -36,11 +36,11 @@ export default function Home() {
     <Navbar></Navbar>
     <div className={`flex h-fit flex-col ${!isDesktop ? 'w-[800px]' : isTablet ? 'w-full' : 'w-full'}`}>
     <MySwiper></MySwiper>
-    <div className='flex-col text-center items-center relative justify-center w-full p-10' style={{background:'#1B3B64'}}>
-   <div className='absolute left-1/2 transform -translate-x-1/2 text-center'>
-  <h1 className='text-2xl text-white mb-4'>“Experience is not necessarily Experiential”</h1>
-  <p className='text-white text-sm w-[500px] mx-auto'>Asosiasi Experiental Learning Indonesia (AELI) menerapkan metode Experiental Learning (EL) dalam memberikan layanan program peningkatan kapasitas SDM </p>
-</div>
+    <div className='flex-col text-center items-center relative justify-between w-full p-10' style={{background:'#1B3B64'}}>
+   <div className='text-center'>
+    <h1 className='text-2xl text-white mb-4'>“Experience is not necessarily Experiential”</h1>
+    <p className='text-white text-sm w-[500px] mx-auto'>Asosiasi Experiental Learning Indonesia (AELI) menerapkan metode Experiental Learning (EL) dalam memberikan layanan program peningkatan kapasitas SDM </p>
+  </div>
 
     <img src="Group 31.png" alt="" />
     </div>
