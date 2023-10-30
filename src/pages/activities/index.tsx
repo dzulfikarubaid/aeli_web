@@ -40,9 +40,9 @@ function Activities() {
      
         <h1 className='font-bold'>AELI BERSATU BERJAYA</h1>
     </div>
-  
+    <Footer></Footer>
     </div>
-    <Footer className="!bg-white !text-black border-t-[1px]" logo='logo-aeli.png'></Footer>
+    
 
     </>
     
