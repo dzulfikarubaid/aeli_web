@@ -91,9 +91,9 @@ function dpp() {
         const namaUrl = nama.toLowerCase().replace(/\s+/g, '-');
       return(
         <Link href={`/dpp/${namaUrl}`} >
-        <div  className=' p-4 text-blue-500 flex flex-col gap-4 rounded-xl w-[250px] '>
-          <Image width={200} height={200} src={foto} alt="" />
-          <div className=''>
+        <div  className=' p-4 text-blue-500 flex flex-col gap-4 rounded-xl w-[250px] justify-center items-center'>
+          <Image width={200} height={200} className=' w-[200px] h-[200px] object-contain' src={foto} alt="" />
+          <div className='text-center'>
             <h1 >{formattedNama}</h1>
             <h1 className='text-black'>{jabatan}</h1>
           </div>
@@ -113,14 +113,66 @@ function dpp() {
         <div className='flex flex-wrap w-full gap-10 justify-center py-10'>
 
           <div className='w-full'>
-            <div className='flex flex-row justify-between items-center w-full '>
+            <div className='flex flex-col justify-center items-center w-full gap-20 '>
                 <div>
-                    <h1 className='font-bold'>Dewan Pembina</h1>
-                    <Card nama="NURFAHMI" jabatan="Ketua Umum" foto="/avatar-blue.png"></Card>
+                    <h1 className='font-bold text-center'>Dewan Etik</h1>
+                    <div className='flex flex-row gap-10'>
+                    <Card nama="Ferdin Boy" jabatan="Ketua Dewan Etik" foto="/e.png"></Card>
+                    <Card nama="Agus Supriyo" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
+                    <Card nama="Tri Cahyono Putro" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
+                    </div>
 
                 </div>
                 <div>
-                    <h1 className='font-bold'>Dewan Etik</h1>
+                    <h1 className='font-bold text-center'>Dewan Pembina</h1>
+                    <div className='flex flex-row gap-10'>
+                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/Foto Pengurus/heydar.jpg"></Card>
+                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    </div>
+                </div>
+                <div>
+                    <h1 className='font-bold text-center'>Ketua Umum</h1>
+                    <div className='flex flex-row gap-10'>
+                    <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/e.png"></Card>
+                    </div>
+                </div>
+                <div className='flex flex-row justify-between w-3/4'>
+                    <div className='flex flex-col gap-10'>
+                        <Card nama="Gigih Gesang" jabatan="Sekretaris Jenderal" foto="/e.png"></Card>
+                        <Card nama="Nursanti Adji" jabatan="Kesekretariatan" foto="/e.png"></Card>
+                    </div>
+                    <div>
+                    <Card nama="Jepih Nurhadi" jabatan="Bendahara Umum" foto="/e.png"></Card>
+                    </div>
+                </div>
+                <div className='flex flex-col w-full justify-center items-center'>
+                    <h1 className='font-bold text-center'>Komite Eksekutif</h1>
+                    <div className='flex flex-wrap gap-10 justify-center w-3/4'>
+                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
+                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
+                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
+                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                
+                    </div>
+                </div>
+                <div className='flex flex-col w-full justify-center items-center'>
+                    <h1 className='font-bold text-center'>Ketua Bidang</h1>
+                    <div className='flex flex-wrap gap-10 justify-center w-3/4'>
+                    <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/e.png"></Card>
+                    <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/avatar-blue.png"></Card>
+                    <Card nama="Ardian Rangga" jabatan="Kabid. Pendidikan dan Pelatihan" foto="/avatar-blue.png"></Card>
+                    <Card nama="D. P. Arsa" jabatan="Kabid. Sertifikasi dan Akreditasi" foto="/e.png"></Card>
+                    <Card nama="Sofyan Hadi" jabatan="Kabid. Komunikasi Publik" foto="/avatar-blue.png"></Card>
+                    <Card nama="Heriyanto" jabatan="Kabid. Hubungan Pemerintah" foto="/avatar-blue.png"></Card>
+                    <Card nama="Deny Nur Alam" jabatan="Kabid. Hubungan Internasional" foto="/e.png"></Card>
+                    <Card nama="Dwiki Prayoga" jabatan="Kabid. Hubungan Pasar dan Mitra" foto="/avatar-blue.png"></Card>
+                
+                    </div>
                 </div>
             </div>
         

@@ -3,14 +3,17 @@ import React from 'react'
 import { FaInstagram, FaYoutube } from 'react-icons/fa'
 
 function Footer(props: any) {
-  const { className } = props
+  let { className, logo } = props
+  if(logo == null) {
+    logo = "/logo-aeli2.png"
+  }
   return (
     <div className={`${className} `}>
-      <div className='flex flex-col justify-between text-center bg-[#1B3B64] h-[536px] w-full p-20  text-white'>
+      <div className={`flex flex-col justify-between text-center ${className} bg-[#1B3B64] h-[536px] w-full p-20  text-white`}>
         <div className='flex flex-row justify-between '>
           <div className='flex flex-col gap-6'>
             <div className='flex flex-row gap-4 items-center'>
-              <img src="/logo-aeli2.png" className='w-[50px] h-[50px]' alt="" />
+              <img src={logo} className='w-[50px] h-[50px]' alt="" />
               <h1 className=' text-sm text-left '>
                 Asosiasi <br />Experiential Learning <br />Indonesia
               </h1>
