@@ -43,7 +43,7 @@ export default function Home() {
   </div>
 
     <div className='w-full justify-center items-center'>
-    <img src="Group 31.png" alt="" />
+    <img className='w-[500px] self-center mx-auto' src="Group 31.png" alt="" />
     </div>
     </div>
 
