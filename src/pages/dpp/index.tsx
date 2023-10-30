@@ -93,8 +93,8 @@ function Dpp() {
         const namaUrl = nama.toLowerCase().replace(/\s+/g, '-');
       return(
         <Link href={`/dpp/${namaUrl}`} >
-        <div  className={`p-4 text-blue-500 flex flex-col gap-4 rounded-xl ${!isDesktop ? 'w-[80px] ' : 'w-[250px]'} justify-center items-center`}>
-          <Image width={isDesktop ? 200 : 50} height={isDesktop ? 200 : 50} className={`${isDesktop ? 'w-[200px] h-[200px]' : 'w-[50px] h-[50px]'} object-contain`} src={foto} alt="" />
+        <div  className={`p-4 text-blue-500 flex flex-col gap-4 rounded-xl ${!isDesktop ? 'w-[150px] ' : 'w-[250px]'} justify-center items-center`}>
+          <Image width={isDesktop ? 200 : 100} height={isDesktop ? 200 : 100} className={`${isDesktop ? 'w-[200px] h-[200px]' : 'w-[50px] h-[50px]'} object-contain`} src={foto} alt="" />
           <div className='text-center'>
             <h1 >{formattedNama}</h1>
             <h1 className='text-black'>{jabatan}</h1>
@@ -140,7 +140,7 @@ function Dpp() {
                     <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/e.png"></Card>
             
                 </div>
-                <div className='flex flex-row justify-between w-full'>
+                <div className='flex flex-row justify-center gap-[200px] w-full'>
                     <div className={`flex flex-col gap-10 items-center `}>
                         <h1 className={`font-bold text-center `}>Sekretaris Jenderal</h1>
                         <Card nama="Gigih Gesang" jabatan="Sekretaris Jenderal" foto="/e.png"></Card>
