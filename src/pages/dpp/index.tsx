@@ -118,7 +118,7 @@ function Dpp() {
           <div className='w-full mt-10'>
             <div className='flex flex-col justify-center items-center w-full gap-20 '>
                 <div>
-                    <h1 className='font-bold text-center'>Dewan Etik</h1>
+                    <h1 className='font-bold text-center  mb-10'>Dewan Etik</h1>
                     <div className='flex flex-row gap-10'>
                     <Card nama="Ferdin Boy" jabatan="Ketua Dewan Etik" foto="/e.png"></Card>
                     <Card nama="Agus Supriyo" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
@@ -127,7 +127,7 @@ function Dpp() {
 
                 </div>
                 <div>
-                    <h1 className='font-bold text-center'>Dewan Pembina</h1>
+                    <h1 className='font-bold text-center  mb-10'>Dewan Pembina</h1>
                     <div className='flex flex-row gap-10'>
                     <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/Foto Pengurus/heydar.jpg"></Card>
                     <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
@@ -135,7 +135,7 @@ function Dpp() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center'>Ketua Umum</h1>
+                    <h1 className='font-bold text-center mb-10'>Ketua Umum</h1>
                   
                     <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/e.png"></Card>
             
@@ -152,7 +152,7 @@ function Dpp() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center'>Komite Eksekutif</h1>
+                    <h1 className='font-bold text-center  mb-10'>Komite Eksekutif</h1>
                     <div className={`flex flex-wrap gap-10 justify-center ${!isDesktop ? 'w-full' : 'w-full'}`}>
                     <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
                     <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
@@ -166,7 +166,7 @@ function Dpp() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center'>Ketua Bidang</h1>
+                    <h1 className='font-bold text-center  mb-10'>Ketua Bidang</h1>
                     <div className='flex flex-wrap gap-10 justify-center w-full'>
                     <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/e.png"></Card>
                     <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/avatar-blue.png"></Card>
