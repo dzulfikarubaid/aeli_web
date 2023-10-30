@@ -6,7 +6,7 @@ import {signIn, signOut, useSession} from 'next-auth/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import useResponsive from '@/components/useResponsive';
-import { FaArrowDown, FaBurger } from 'react-icons/fa6';
+import { FaArrowDown, FaBurger, FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 import {FiMenu} from 'react-icons/fi';
 import {IoMdClose} from 'react-icons/io';
 interface DropdownItemProps {
@@ -134,8 +134,9 @@ function Navbar(props:any){
     signOut()
 
   }
+  const [isBuka, setIsBuka] = useState(false)
   function toggle(){
-    setIsOpen(true)
+    setIsBuka(!isBuka)
   }
   const [isOpen, setIsOpen] = useState(false);
   const {isDesktop, isTablet, isMobile, isOnlyMobile} = useResponsive()
@@ -195,9 +196,9 @@ function Navbar(props:any){
               <IoMdClose size={45}></IoMdClose>
             </button></div>
             <div className='flex flex-col gap-10 text-white text-3xl'>
-            <button onClick={toggle} className='mt-10' >About <span><FaArrowDown></FaArrowDown></span></button>
+            <button onClick={toggle} className='mt-10 flex flex-row items-center gap-4 justify-center w-full' ><h1>About</h1>{!isBuka ? <FaChevronDown size={25}></FaChevronDown> : <FaChevronUp size={25}></FaChevronUp>}</button>
             {
-              isOpen && 
+              isBuka && 
               <div className='flex flex-col gap-10'>
                 <Link href={'/aeli'}>Asosiasi Experiential Learning Indonesia</Link>
 

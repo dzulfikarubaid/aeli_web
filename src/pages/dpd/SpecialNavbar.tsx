@@ -6,7 +6,7 @@ import {signIn, signOut, useSession} from 'next-auth/react'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import useResponsive from '@/components/useResponsive';
-import { FaBurger } from 'react-icons/fa6';
+import { FaBurger, FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 import {FiMenu} from 'react-icons/fi';
 import {IoMdClose} from 'react-icons/io';
 interface DropdownItemProps {
@@ -135,6 +135,10 @@ function NavbarWhite(props:any){
   }
   const [isOpen, setIsOpen] = useState(false);
   const {isDesktop, isTablet, isMobile, isOnlyMobile} = useResponsive()
+  const [isBuka, setIsBuka] = useState(false)
+  function toggle(){
+    setIsBuka(!isBuka)
+  }
     return(
       <div className=''>
         
@@ -191,7 +195,16 @@ function NavbarWhite(props:any){
               <IoMdClose size={45}></IoMdClose>
             </button></div>
             <div className='flex flex-col gap-10 text-white text-3xl'>
-            <a className='mt-10' href={'aeli'}>About</a>
+            <button onClick={toggle} className='mt-10 flex flex-row items-center gap-4 justify-center w-full' ><h1>About</h1>{!isBuka ? <FaChevronDown size={25}></FaChevronDown> : <FaChevronUp size={25}></FaChevronUp>}</button>
+            {
+              isBuka && 
+              <div className='flex flex-col gap-10'>
+                <a href={'/aeli'}>Asosiasi Experiential Learning Indonesia</a>
+
+                <a href={'/dpp'}>Dewan Pengurus Pusat</a>
+              </div>
+                
+                }
             <a href={'activities'} className={`hover:border-b-white`}>
               Activities
               </a>
