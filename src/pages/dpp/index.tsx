@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Dpp from '../../dpp'
 import Link from 'next/link'
 import NoNavbar from '../NoNavbar'
+import useResponsive from '@/components/useResponsive'
 
 
 const pengurus = [
@@ -81,6 +82,7 @@ const pengurus = [
     
 ]
 function dpp() {
+    const {isDesktop, isTablet, isMobile, isOnlyMobile} = useResponsive()
     function Card(props:any){
         const {nama, jabatan, foto} = props
         const formattedNama = nama
@@ -91,8 +93,8 @@ function dpp() {
         const namaUrl = nama.toLowerCase().replace(/\s+/g, '-');
       return(
         <Link href={`/dpp/${namaUrl}`} >
-        <div  className=' p-4 text-blue-500 flex flex-col gap-4 rounded-xl w-[250px] justify-center items-center'>
-          <Image width={200} height={200} className=' w-[200px] h-[200px] object-contain' src={foto} alt="" />
+        <div  className={`p-4 text-blue-500 flex flex-col gap-4 rounded-xl ${!isDesktop ? 'w-[80px] ' : 'w-[250px]'} justify-center items-center`}>
+          <Image width={isDesktop ? 200 : 50} height={isDesktop ? 200 : 50} className={`${isDesktop ? 'w-[200px] h-[200px]' : 'w-[50px] h-[50px]'} object-contain`} src={foto} alt="" />
           <div className='text-center'>
             <h1 >{formattedNama}</h1>
             <h1 className='text-black'>{jabatan}</h1>
@@ -101,18 +103,19 @@ function dpp() {
         </Link>
       )
     }
+    
     return (
-      <NoNavbar>
+        <div  className={`${!isDesktop ? 'w-[800px]' : 'w-full'} flex flex-col flex-center`}>
+                <NoNavbar>
         
-        <div className=''>
-        <div className='flex flex-col justify-center items-center'>
-            <h1 className='font-bold text-center text-xl'>Struktur Organisasi Dewan Pengurus Pusat</h1>
-        <Image className='my-10' alt='' width={800} height={400} src={'/org.jpg'}></Image>
-        </div>
-        <h1 className='font-bold text-center text-xl'>Daftar Dewan Pengurus Pusat</h1>
-        <div className='flex flex-wrap w-full gap-10 justify-center py-10'>
+        <div className='flex flex-col justify-center items-center w-full'>
 
-          <div className='w-full'>
+            <h1 className='font-bold text-center text-xl'>Struktur Organisasi Dewan Pengurus Pusat</h1>
+
+
+  
+
+          <div className='w-full mt-10'>
             <div className='flex flex-col justify-center items-center w-full gap-20 '>
                 <div>
                     <h1 className='font-bold text-center'>Dewan Etik</h1>
@@ -131,24 +134,26 @@ function dpp() {
                     <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
                     </div>
                 </div>
-                <div>
+                <div className='flex flex-col w-full justify-center items-center'>
                     <h1 className='font-bold text-center'>Ketua Umum</h1>
-                    <div className='flex flex-row gap-10'>
+                  
                     <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/e.png"></Card>
-                    </div>
+            
                 </div>
-                <div className='flex flex-row justify-between w-3/4'>
-                    <div className='flex flex-col gap-10'>
+                <div className='flex flex-row justify-between w-full'>
+                    <div className={`flex flex-col gap-10 items-center `}>
+                        <h1 className={`font-bold text-center ${!isDesktop && 'w-[100px]'}`}>Sekretaris Jenderal</h1>
                         <Card nama="Gigih Gesang" jabatan="Sekretaris Jenderal" foto="/e.png"></Card>
                         <Card nama="Nursanti Adji" jabatan="Kesekretariatan" foto="/e.png"></Card>
                     </div>
-                    <div>
+                    <div className={`flex flex-col gap-10 items-center `}>
+                        <h1 className={`font-bold text-center ${!isDesktop && 'w-[100px]'}`}>Bendahara Umum</h1>
                     <Card nama="Jepih Nurhadi" jabatan="Bendahara Umum" foto="/e.png"></Card>
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
                     <h1 className='font-bold text-center'>Komite Eksekutif</h1>
-                    <div className='flex flex-wrap gap-10 justify-center w-3/4'>
+                    <div className={`flex flex-wrap gap-10 justify-center ${!isDesktop ? 'w-full' : 'w-full'}`}>
                     <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
                     <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
                     <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
@@ -162,7 +167,7 @@ function dpp() {
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
                     <h1 className='font-bold text-center'>Ketua Bidang</h1>
-                    <div className='flex flex-wrap gap-10 justify-center w-3/4'>
+                    <div className='flex flex-wrap gap-10 justify-center w-full'>
                     <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/e.png"></Card>
                     <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/avatar-blue.png"></Card>
                     <Card nama="Ardian Rangga" jabatan="Kabid. Pendidikan dan Pelatihan" foto="/avatar-blue.png"></Card>
@@ -178,8 +183,10 @@ function dpp() {
         
           </div>
         </div>
-        </div>
+
       </NoNavbar>
+        </div>
+  
     )
   }
   
