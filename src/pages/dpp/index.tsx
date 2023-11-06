@@ -122,7 +122,7 @@ function Dpp() {
                     <div className='flex flex-row gap-10'>
                     <Card nama="Ferdin Boy" jabatan="Ketua Dewan Etik" foto="/e.png"></Card>
                     <Card nama="Agus Supriyo" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
-                    <Card nama="Tri Cahyono Putro" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
+                    <Card nama="Tri Cahyono Putra" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
                     </div>
 
                 </div>
@@ -152,16 +152,17 @@ function Dpp() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center  mb-10'>Komite Eksekutif</h1>
+                    <h1 className='font-bold text-center  mb-10'>Komite Pelaksana</h1>
                     <div className={`flex flex-wrap gap-10 justify-center ${!isDesktop ? 'w-full' : 'w-full'}`}>
-                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
-                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
-                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
-                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
-                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
-                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
-                    <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/e.png"></Card>
-                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Yohanes Batista Hanes" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="M. Deny Yudiana" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="Dewa Putu Gede Wesnawa" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="Muchamad Mansur" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="Arifanti Murniawati" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="M. Prasetyo Bagus" jabatan="Anggota Komite Pelaksana" foto="/avatar-blue.png"></Card>
+                    <Card nama="Arwin Prayetno" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="Desi Panca Putri Syamsul" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    
                 
                     </div>
                 </div>
