@@ -172,7 +172,7 @@ function Dpp() {
                     <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/Pengurus/6.png"></Card>
                     <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/Pengurus/7.png"></Card>
                     <Card nama="Ardian Rangga" jabatan="Kabid. Pendidikan dan Pelatihan" foto="/Pengurus/8.png"></Card>
-                    <Card nama="D. P. Arsa" jabatan="Kabid. Sertifikasi dan Akreditasi" foto="/Pengurus/9.png.png"></Card>
+                    <Card nama="D. P. Arsa" jabatan="Kabid. Sertifikasi dan Akreditasi" foto="/Pengurus/9.png"></Card>
                     <Card nama="Sofyan Hadi" jabatan="Kabid. Komunikasi Publik" foto="/Pengurus/10.png"></Card>
                     <Card nama="Heriyanto" jabatan="Kabid. Hubungan Pemerintah" foto="/Pengurus/11.png"></Card>
                     <Card nama="Deny Nur Alam" jabatan="Kabid. Hubungan Internasional" foto="/Pengurus/12.png"></Card>
