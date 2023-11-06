@@ -76,7 +76,7 @@ export default function Home() {
     }
     </div>
    
-    <Spotlight slides={slides}></Spotlight>
+    {/* <Spotlight slides={slides}></Spotlight> */}
     <div className='flex flex-col justify-center items-center text-center py-20'>
     <h1 className='text-xl'>Social Media Update</h1>
     <div className={`gap-10 mt-10 flex flex-wrap ${!isDesktop ? 'w-[600px]' : 'w-full'} p-10 justify-center items-center`}>

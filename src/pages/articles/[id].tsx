@@ -164,7 +164,7 @@ function DetailArticles() {
       <Swiper
       className='h-full w-full '
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
-      
+      spaceBetween={20}
       slidesPerView={!isDesktop ? 1 : 2}
       onSlideChange={(swiper) =>
         isNaN(swiper.realIndex) && swiper.slideTo(0)
@@ -174,7 +174,7 @@ function DetailArticles() {
         {
           filteredData.length > 0 ? filteredData.map((item: any, index) => (
             <SwiperSlide key={item.id} className="">
-              <div className="flex flex-col w-full justify-center items-center">
+              <div className="flex flex-col w-full  justify-center items-center">
               <div  className={`flex flex-col ${!isDesktop ? 'w-[calc(100%-48px)]' : 'w-[500px]'}  border-[1px] rounded-xl h-[200px] gap-4 p-4`}>
             <div className={`flex flex-row gap-1 h-6 ${!isDesktop ? 'text-[12px]' : 'text-md'} `}>
               <Link className='hover:border-b hover:border-black w-fit' href={`/profile/${item.name}`}>

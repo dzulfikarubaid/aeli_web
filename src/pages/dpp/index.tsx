@@ -110,10 +110,10 @@ function Dpp() {
         
         <div className='flex flex-col justify-center items-center w-full'>
 
-            <h1 className='font-bold text-center text-xl'>Struktur Organisasi Dewan Pengurus Pusat</h1>
+            <h1 className='font-bold text-center text-xl mb-10'>Struktur Organisasi Dewan Pengurus Pusat</h1>
 
-
-  
+            <object data="Pengurus/Pengurus.pdf" type="application/pdf" width="80%" height="400">
+            </object>
 
           <div className='w-full mt-10'>
             <div className='flex flex-col justify-center items-center w-full gap-20 '>
@@ -137,18 +137,18 @@ function Dpp() {
                 <div className='flex flex-col w-full justify-center items-center'>
                     <h1 className='font-bold text-center mb-10'>Ketua Umum</h1>
                   
-                    <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/e.png"></Card>
+                    <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/Pengurus/2.png"></Card>
             
                 </div>
                 <div className='flex flex-row justify-center gap-[200px] w-full'>
                     <div className={`flex flex-col gap-10 items-center `}>
                         <h1 className={`font-bold text-center `}>Sekretaris Jenderal</h1>
-                        <Card nama="Gigih Gesang" jabatan="Sekretaris Jenderal" foto="/e.png"></Card>
-                        <Card nama="Nursanti Adji" jabatan="Kesekretariatan" foto="/e.png"></Card>
+                        <Card nama="Gigih Gesang" jabatan="Sekretaris Jenderal" foto="/Pengurus/3.png"></Card>
+                        <Card nama="Nursanti Adji" jabatan="Kesekretariatan" foto="/Pengurus/5.png"></Card>
                     </div>
                     <div className={`flex flex-col gap-10 items-center `}>
                         <h1 className={`font-bold text-center `}>Bendahara Umum</h1>
-                    <Card nama="Jepih Nurhadi" jabatan="Bendahara Umum" foto="/e.png"></Card>
+                    <Card nama="Jepih Nurhadi" jabatan="Bendahara Umum" foto="/Pengurus/4.png"></Card>
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
@@ -169,14 +169,14 @@ function Dpp() {
                 <div className='flex flex-col w-full justify-center items-center'>
                     <h1 className='font-bold text-center  mb-10'>Ketua Bidang</h1>
                     <div className='flex flex-wrap gap-10 justify-center w-full'>
-                    <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/e.png"></Card>
-                    <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/avatar-blue.png"></Card>
-                    <Card nama="Ardian Rangga" jabatan="Kabid. Pendidikan dan Pelatihan" foto="/avatar-blue.png"></Card>
-                    <Card nama="D. P. Arsa" jabatan="Kabid. Sertifikasi dan Akreditasi" foto="/e.png"></Card>
-                    <Card nama="Sofyan Hadi" jabatan="Kabid. Komunikasi Publik" foto="/avatar-blue.png"></Card>
-                    <Card nama="Heriyanto" jabatan="Kabid. Hubungan Pemerintah" foto="/avatar-blue.png"></Card>
-                    <Card nama="Deny Nur Alam" jabatan="Kabid. Hubungan Internasional" foto="/e.png"></Card>
-                    <Card nama="Dwiki Prayoga" jabatan="Kabid. Hubungan Pasar dan Mitra" foto="/avatar-blue.png"></Card>
+                    <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/Pengurus/6.png"></Card>
+                    <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/Pengurus/7.png"></Card>
+                    <Card nama="Ardian Rangga" jabatan="Kabid. Pendidikan dan Pelatihan" foto="/Pengurus/8.png"></Card>
+                    <Card nama="D. P. Arsa" jabatan="Kabid. Sertifikasi dan Akreditasi" foto="/Pengurus/9.png.png"></Card>
+                    <Card nama="Sofyan Hadi" jabatan="Kabid. Komunikasi Publik" foto="/Pengurus/10.png"></Card>
+                    <Card nama="Heriyanto" jabatan="Kabid. Hubungan Pemerintah" foto="/Pengurus/11.png"></Card>
+                    <Card nama="Deny Nur Alam" jabatan="Kabid. Hubungan Internasional" foto="/Pengurus/12.png"></Card>
+                    <Card nama="Dwiki Prayoga" jabatan="Kabid. Hubungan Pasar dan Mitra" foto="/Pengurus/13.png"></Card>
                 
                     </div>
                 </div>

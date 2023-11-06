@@ -181,7 +181,7 @@ function DetailArticles() {
       <Swiper
       className='h-full w-full '
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
-      
+      spaceBetween={20}
       slidesPerView={!isDesktop ? 1 : 2}
       onSlideChange={(swiper) =>
         isNaN(swiper.realIndex) && swiper.slideTo(0)
