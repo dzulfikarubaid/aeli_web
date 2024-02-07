@@ -11,73 +11,73 @@ const pengurus = [
     {
         nama: "NURFAHMI",
         jabatan: "Ketua Umum",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
 
     },
     {
         nama: "JEPIH NURHADI",
         jabatan: "Bendahara Umum",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "GIGIH GESANG",
         jabatan: "Sekretaris Jenderal",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "NURSANTI ADJI",
         jabatan: "Kepala BidangKesekretariatan",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "UNANG RUSNADI",
         jabatan: "Kepala Bidang Keanggotaan",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "DIAN WIBOWO",
         jabatan: "Kepala Bidang Keorganisasian",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "ADI WALUYO",
         jabatan: "Kepala Bidang Penelitian dan Pengembangan",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "ARDIAN RANGGA F",
         jabatan: "Kepala Bidang Pendidikan dan Pelatihan",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama:"D.P. ARSA",
         jabatan: "Kepala Bidang Sertifikasi dan Akreditasi",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "SOFIYAN HADI",
         jabatan: "Kepala Bidang Komunikasi Publik",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "DENY NUR ALAM",
         jabatan: "Kepala Bidang Hubungan Pemerintah",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "HERIYANTO",
         jabatan: "Kepala Bidang Hubungan Pemerintah",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "DENY NUR ALAM",
         jabatan: "Kepala Bidang Hubungan Internasional",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     {
         nama: "DWIKI PRAYOGA MENZANO",
         jabatan: "Kepala Bidang Hubungan Pasar dan Mitra",
-        foto: "/avatar-blue.png"
+        foto: "/useroke.png"
     },
     
 ]
@@ -96,8 +96,8 @@ function Dpp() {
         <div  className={`p-4 text-blue-500 flex flex-col gap-4 rounded-xl ${!isDesktop ? 'w-[150px] ' : 'w-[250px]'} justify-center items-center`}>
           <Image width={isDesktop ? 200 : 100} height={isDesktop ? 200 : 100} className={`${isDesktop ? 'w-[200px] h-[200px]' : 'w-[50px] h-[50px]'} object-contain`} src={foto} alt="" />
           <div className='text-center'>
-            <h1 >{formattedNama}</h1>
-            <h1 className='text-black'>{jabatan}</h1>
+            <h1 className='text-teks'>{formattedNama}</h1>
+            <h1 className='text-subteks'>{jabatan}</h1>
           </div>
         </div>
         </Link>
@@ -106,36 +106,32 @@ function Dpp() {
     
     return (
         <div  className={`${!isDesktop ? 'w-[800px]' : 'w-full'} flex flex-col flex-center`}>
-                <NoNavbar>
         
         <div className='flex flex-col justify-center items-center w-full'>
-
-            <h1 className='font-bold text-center text-xl mb-10'>Struktur Organisasi Dewan Pengurus Pusat</h1>
-
-            <object data="Pengurus/Pengurus.pdf" type="application/pdf" width="80%" height="400">
-            </object>
+            {/* <object data="Pengurus/Pengurus.pdf" type="application/pdf" width="80%" height="400">
+            </object> */}
 
           <div className='w-full mt-10'>
             <div className='flex flex-col justify-center items-center w-full gap-20 '>
                 <div>
-                    <h1 className='font-bold text-center  mb-10'>Dewan Etik</h1>
+                    <h1 className='text-center text-xl mb-10'>Dewan Etik</h1>
                     <div className='flex flex-row gap-10'>
-                    <Card nama="Ferdin Boy" jabatan="Ketua Dewan Etik" foto="/e.png"></Card>
-                    <Card nama="Agus Supriyo" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
-                    <Card nama="Tri Cahyono Putra" jabatan="Anggota Dewan Etik" foto="/avatar-blue.png"></Card>
+                    <Card nama="Ferdin Boy" jabatan="Ketua Dewan Etik" foto="/useroke.png"></Card>
+                    <Card nama="Agus Supriyo" jabatan="Anggota Dewan Etik" foto="/useroke.png"></Card>
+                    <Card nama="Tri Cahyono Putra" jabatan="Anggota Dewan Etik" foto="/useroke.png"></Card>
                     </div>
 
                 </div>
                 <div>
-                    <h1 className='font-bold text-center  mb-10'>Dewan Pembina</h1>
+                    <h1 className='text-xl text-center  mb-10'>Dewan Pembina</h1>
                     <div className='flex flex-row gap-10'>
                     <Card nama="Muhammad Haydar" jabatan="Ketua Dewan Pembina" foto="/Foto Pengurus/heydar.jpg"></Card>
-                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
-                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/avatar-blue.png"></Card>
+                    <Card nama="Adhik Iwan Sulistiyanto" jabatan="Anggota Dewan Pembina" foto="/useroke.png"></Card>
+                    <Card nama="Ronie Ibrahim" jabatan="Anggota Dewan Pembina" foto="/useroke.png"></Card>
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center mb-10'>Ketua Umum</h1>
+                    <h1 className='text-xl text-center mb-10'>Ketua Umum</h1>
                   
                     <Card nama="Nurfahmi" jabatan="Ketua Umum" foto="/Pengurus/2.png"></Card>
             
@@ -152,22 +148,22 @@ function Dpp() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center  mb-10'>Komite Pelaksana</h1>
+                    <h1 className='text-xl text-center  mb-10'>Komite Pelaksana</h1>
                     <div className={`flex flex-wrap gap-10 justify-center ${!isDesktop ? 'w-full' : 'w-full'}`}>
-                    <Card nama="Muchamad Mansur" jabatan="Ketua Komite Pelaksana" foto="/e.png"></Card>
-                    <Card nama="Yohanes Batista Hanes" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
-                    <Card nama="M. Deny Yudiana" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
-                    <Card nama="Dewa Putu Gede Wesnawa" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
-                    <Card nama="Arifanti Murniawati" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
-                    <Card nama="M. Prasetyo Bagus" jabatan="Anggota Komite Pelaksana" foto="/avatar-blue.png"></Card>
-                    <Card nama="Arwin Prayetno" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
-                    <Card nama="Desi Panca Putri Syamsul" jabatan="Anggota Komite Pelaksana" foto="/e.png"></Card>
+                    <Card nama="Muchamad Mansur" jabatan="Ketua Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="Yohanes Batista Hanes" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="M. Deny Yudiana" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="Dewa Putu Gede Wesnawa" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="Arifanti Murniawati" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="M. Prasetyo Bagus" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="Arwin Prayetno" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
+                    <Card nama="Desi Panca Putri Syamsul" jabatan="Anggota Komite Pelaksana" foto="/useroke.png"></Card>
                     
                 
                     </div>
                 </div>
                 <div className='flex flex-col w-full justify-center items-center'>
-                    <h1 className='font-bold text-center  mb-10'>Ketua Bidang</h1>
+                    <h1 className='text-xl text-center  mb-10'>Ketua Bidang</h1>
                     <div className='flex flex-wrap gap-10 justify-center w-full'>
                     <Card nama="Unang Rusnadi" jabatan="Kabid. Keanggotaan" foto="/Pengurus/6.png"></Card>
                     <Card nama="Dian Wibowo" jabatan="Kabid. Keorganisasian" foto="/Pengurus/7.png"></Card>
@@ -185,8 +181,6 @@ function Dpp() {
           </div>
         </div>
 
-      </NoNavbar>
-      <Footer></Footer>
         </div>
   
     )
