@@ -97,7 +97,7 @@ const New = () => {
         <motion.div ref={refmap} initial={{
           opacity: 1,
           y: -200
-        }} transition={{ duration: 1 }} animate={animation} className='flex flex-col bg-gradient-to-b mt-10 from-transparent to-purple-950 rounded-b-3xl border-[1px] gap-4 border-white/30 text-teks p-6 border-t-0 '>
+        }} transition={{ duration: 1 }} animate={animation} className='flex flex-col bg-gradient-to-b mt-10 from-transparent to-purple-950 rounded-b-3xl gap-4  text-teks p-6 border-t-0 '>
           <Map></Map>
           <Link href={'/members'} className='self-center border-[1px] border-white/20 rounded-2xl p-2 px-10 bg-gradient-to-br from-white/20 to-transparent'>See All</Link>
         </motion.div>
@@ -160,7 +160,7 @@ const New = () => {
             </motion.div>
             :
             <motion.button initial={{ opacity: 0}} transition={{ duration: 1 }} animate={{ opacity: 1, y: 0 }} onClick={() => setIsOpen(!isOpen)} className='fixed bottom-14 -right-10'>
-              <h1 className='bg-purple-800 p-4 text-teks rotate-90'>CONTACT US</h1>
+              <h1 className='bg-purple-800 p-4 text-teks rotate-90 rounded-b-2xl'>CONTACT US</h1>
             </motion.button>
         }
 

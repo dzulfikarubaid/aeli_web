@@ -4,7 +4,7 @@ import Content from '../Content'
 import NoNavbar from '../NoNavbar'
 import Navbar from './SpecialNavbar'
 import useResponsive from '@/components/useResponsive'
-import WithNavbar from '../navigation'
+import WithNavbar from './Nav'
 import Footer from '../Footer2'
 const Dpd = () => {
   const { isDesktop, isMobile, isTablet, isOnlyMobile } = useResponsive()

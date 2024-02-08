@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 function Mapss(props: any) {
   const { targetState } = props
   const router = useRouter()
-  const color1 = '#6499E9'
+  const color1 = 'rgba(256, 256, 256, 0.7)'
   const color2 = 'rgb(59 7 100)'
   const color3 = 'rgba(256, 256, 256, 0.4)'
   const color4 = 'rgba(0, 0, 0, 0.0)'
